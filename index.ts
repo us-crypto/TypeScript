@@ -1,5 +1,5 @@
 console.log("hi bitch");
-let age : number =20 ;
+let asdasda : number =20 ;
 console.log(age);
 
-let a :number=2;
+let asdasdaa :number=2;
