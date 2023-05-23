@@ -171,3 +171,33 @@ function greet (name:string|null | undefined ){
 }
 
 greet(null);
+
+
+type Customer = {
+    birthday:Date
+}
+
+function getCustomer(id:number):Customer|null {
+    if (id==0) {
+        return null;
+    } else {
+        return {birthday: new Date()} 
+    }
+}
+let customer = getCustomer(0);
+if (customer!=null&&customer!=undefined ) {
+    console.log(customer.birthday);
+
+} else {
+    console.log('fu');
+}
+////the same as else if up there with ? makes it optional , if there is null or undefined will write it out
+console.log(customer?.birthday?.getFullYear());
+let array:number[]=[1,2];
+// if pos 0 has something willl be printed out 
+
+console.log(array?.[0]);
+//willl be printed if log is a function else its undefined 
+let log:any=null;
+log?.('a');
+console.log(log?.('a'));

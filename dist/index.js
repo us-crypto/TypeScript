@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 console.log("hi Sir");
 let asdasda = 20;
 console.log(asdasda);
@@ -127,4 +128,46 @@ function kgToLbs(weight) {
 console.log('here is the function location ');
 console.log(kgToLbs(3));
 console.log(kgToLbs('6'));
+let widget = {
+    drag: () => console.log('dragged'),
+    resize: () => console.log('resized')
+};
+function test() {
+    return 1;
+}
+let num = 50;
+let metr = 'CM';
+function greet(name) {
+    if (name) {
+        console.log(' hi ' + name);
+    }
+    else {
+        console.log(' Hola  ');
+    }
+}
+greet(null);
+function getCustomer(id) {
+    if (id == 0) {
+        return null;
+    }
+    else {
+        return { birthday: new Date() };
+    }
+}
+let customer = getCustomer(0);
+if (customer != null && customer != undefined) {
+    console.log(customer.birthday);
+}
+else {
+    console.log('fu');
+}
+////the same as else if up there with ? makes it optional , if there is null or undefined will write it out
+console.log((_a = customer === null || customer === void 0 ? void 0 : customer.birthday) === null || _a === void 0 ? void 0 : _a.getFullYear());
+let array = [1, 2];
+// if pos 0 has something willl be printed out 
+console.log(array === null || array === void 0 ? void 0 : array[0]);
+//willl be printed if log is a function
+let log = null;
+log === null || log === void 0 ? void 0 : log('a');
+console.log(log === null || log === void 0 ? void 0 : log('a'));
 //# sourceMappingURL=index.js.map
