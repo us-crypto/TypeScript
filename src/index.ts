@@ -138,3 +138,36 @@ console.log('here is the function location ')
 console.log(kgToLbs(3));
 console.log(kgToLbs('6'));
 
+type Dragable={
+    drag:()=> void
+}
+
+type Resizeable={
+    resize:()=> void
+}
+type UIwidget=Dragable & Resizeable;
+
+let widget:UIwidget={
+    drag:()=>console.log('dragged'),
+    resize:()=>console.log('resized')
+
+}
+function test(): number {
+return 1;
+    
+}
+type fix =50|100;
+let num : fix=50;
+type Metric = 'CM'|'INCH';
+let metr :Metric ='CM';
+
+function greet (name:string|null | undefined ){
+    if (name) {
+        console.log(' hi '+ name);
+    } else {
+                console.log(' Hola  ');
+    }
+
+}
+
+greet(null);
